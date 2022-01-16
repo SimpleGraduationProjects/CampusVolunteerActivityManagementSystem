@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.collegevol.dao.QrcodeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.collegevol.entity.Qrcode">
+        <id column="q_id" property="qId" />
+        <result column="user_id" property="userId" />
+        <result column="q_code_url" property="qCodeUrl" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        q_id, user_id, q_code_url
+    </sql>
+
+</mapper>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.collegevol.dao.EventMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.collegevol.entity.Event">
+        <id column="event_id" property="eventId"/>
+        <result column="event_img_url" property="eventImgUrl"/>
+        <result column="start_time" property="startTime"/>
+        <result column="title" property="title"/>
+        <result column="location" property="location"/>
+        <result column="user_id" property="userId"/>
+        <result column="description" property="description"/>
+        <result column="end_time" property="endTime"/>
+        <result column="event_score" property="eventScore"/>
+        <result column="supply_name" property="supplyName"/>
+        <result column="status" property="status"/>
+        <result column="tags" property="tags"/>
+        <result column="event_summary" property="eventSummary" />
+    </resultMap>
+
+    <resultMap id="EventResultMap" type="com.collegevol.vo.EventVo">
+        <id column="event_id" property="eventId"/>
+        <result column="event_img_url" property="eventImgUrl"/>
+        <result column="start_time" property="startTime"/>
+        <result column="title" property="title"/>
+        <result column="location" property="location"/>
+        <result column="user_id" property="userId"/>
+        <result column="description" property="description"/>
+        <result column="end_time" property="endTime"/>
+        <result column="event_score" property="eventScore"/>
+        <result column="supply_name" property="supplyName"/>
+        <result column="status" property="status"/>
+        <result column="maxnum" property="maxnum"/>
+        <result column="num" property="num"/>
+        <result column="event_summary" property="eventSummary" />
+        <result column="tags" property="tags"/>
+    </resultMap>
+
+    <resultMap id="EventUserInfoResultMap" type="com.collegevol.vo.EventUserInfoVo">
+        <id column="event_id" property="eventId"/>
+        <result column="event_img_url" property="eventImgUrl"/>
+        <result column="start_time" property="startTime"/>
+        <result column="title" property="title"/>
+        <result column="location" property="location"/>
+        <result column="user_id" property="userId"/>
+        <result column="description" property="description"/>
+        <result column="end_time" property="endTime"/>
+        <result column="event_score" property="eventScore"/>
+        <result column="supply_name" property="supplyName"/>
+        <result column="status" property="status"/>
+        <result column="maxnum" property="maxnum"/>
+        <result column="user_name" property="userName"/>
+        <result column="applyStatus" property="apply_status"/>
+        <result column="tags" property="tags"/>
+        <result column="event_summary" property="eventSummary" />
+    </resultMap>
+
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        event_id,
+        event_img_url,
+        start_time,
+        title,
+        location,
+        user_id,
+        description,
+        end_time,
+        event_score,
+        supply_name,
+        status,
+        event_summary
+        tags
+    </sql>
+
+
+    <select id="qryEventForPage" resultMap="EventResultMap">
+        SELECT a.event_id,
+               a.event_img_url,
+               a.start_time,
+               a.end_time,
+               a.user_id,
+               a.title,
+               a.location,
+               a.description,
+               a.event_score,
+               a.supply_name,
+               a.status,
+               a.tags,
+               maxnum,
+               (SELECT count(1) FROM event_apply b WHERE a.event_id = b.event_id) as num
+        FROM `event` a
+        ORDER BY a.start_time DESC
+    </select>
+
+
+    <select id="qryEventUserInfoVoByEventId" resultMap="EventUserInfoResultMap">
+        SELECT a.event_id,a.event_img_url,a.start_time,
+               a.end_time,
+               u.user_id,
+               u.user_name,
+               a.title,
+               a.location,
+               a.description,
+               a.event_score,
+               a.supply_name,
+               a.status,
+               a.tags,
+               d.apply_status,
+               a.maxnum,
+               (SELECT count(1) FROM event_apply b WHERE a.event_id = b.event_id) as num
+        FROM event_apply d JOIN `event` a on a.event_id=d.event_id
+                           JOIN user_info u on u.user_id=d.user_id
+        WHERE d.user_id=#{event.userId} and a.event_id=#{event.eventId}
+    </select>
+</mapper>
