@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-page": "/dist/page/index",
+    "i-button": "/dist/button/index"
+  }
+}

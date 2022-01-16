@@ -1,0 +1,6 @@
+/* pages/mine_aboutUs/mine_aboutUs.wxss */
+.txt{
+  text-align:center;
+  align-items:center;
+  margin-top: 50%;
+}

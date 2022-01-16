@@ -1,0 +1,93 @@
+<!--pages/history/history.wxml-->
+<view class='top'>
+  <text class='title'>广场</text>
+</view>
+<view>
+  <swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  class="slideItem">
+  <block wx:for="{{imgUrls}}" >
+    <swiper-item>
+      <image src="{{item}}" class="imgSlide" />
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<view class='hr'></view>
+<view>
+<view class='history-act' wx:for="{{historyActList}}" wx:key="{{item.eventId}}" bindtap="historyAct" id="{{item.eventId}}">
+    <view class='item-left'><image class='left-img' src="{{item.firstImgUrl}}"></image></view>
+    <view class='item-right'>
+        <view class='c'>
+          <!-- <image class='act-logo' src='{{item.logo}}'></image> -->
+          <text class='txt-title'>【{{item.title}}】</text>
+        </view>
+        <view><text class='txt-intro'>{{item.description}}</text></view>
+    </view>
+</view>
+</view>
+<view>
+<i-page current="{{ current }}" total="{{ totalPage }}" bind:change="changePage" class="page">
+    <view slot="prev">上一页</view>
+    <view slot="next">下一页</view>
+</i-page>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

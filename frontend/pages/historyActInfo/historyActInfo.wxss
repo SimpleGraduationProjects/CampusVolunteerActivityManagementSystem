@@ -1,0 +1,137 @@
+/* pages/historyActInfo/historyActInfo.wxss */
+.wrapper {
+  padding: 25rpx;
+  /* text-align: center; */
+}
+.nav{
+  width: 100%;
+  height: 130rpx;
+  background-color: #77BB42;
+  margin: 0 auto;
+  text-align: left;
+}
+.title{
+  font-size: 40rpx;
+  color: #fff;
+  line-height: 130rpx;
+  margin-left: 30rpx;
+  font-family: '黑体';
+}
+.actLogo {
+  width: 110rpx;
+  height: 110rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+.act-logo-img {
+  width: 100%;
+  height: 100%;
+}
+.act-name-txt {
+  font-size: 36rpx;
+}
+.act-label{
+  margin-top: 15rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  float: left;
+  margin-right: 30rpx;
+  font-size: 22rpx;
+  border-radius: 6rpx;
+  background-color: rgb(243, 221, 20);
+  padding: 5rpx 22rpx;
+  color: #fff;
+}
+.top::after {
+  display:block;
+  clear:both;
+  content:"";
+  visibility:hidden;
+  height:0;
+  zoom: 1;
+}
+.act-intro{
+  margin-top: 18rpx;
+  font-size: 34rpx;
+  border-top: solid #aaa 2rpx;
+  padding: 8rpx;
+}
+.act-img {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+.act-img-item {
+  width: 225rpx;
+  height: 170rpx;
+  margin-right: 10rpx;
+  margin-top: 18rpx;
+}
+.like {
+  height: 80rpx;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8rpx;
+  padding: 8rpx 0;
+  border-bottom: solid #ff5a18 2rpx;
+}
+.like-txt {
+  font-size: 30rpx;
+  color: rgb(128, 128, 128);
+}
+.zan-img,.comment-img{
+  width: 65rpx;
+  height: 65rpx;
+  margin-top: 10rpx;
+}
+.comment-img {
+  margin-left: 30rpx;
+}
+.comment-info {
+  padding: 20rpx 0;
+  border-bottom: solid #aaa 2rpx;
+}
+.avatar {
+  width: 110rpx;
+  height: 110rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.nickname-txt {
+  font-size: 34rpx;
+}
+.name-txt {
+  color: #aaa;
+  font-size: 34rpx;
+  margin-top: 12rpx;
+  display: flex;
+}
+.comment-txt {
+  margin-top: 18rpx;
+  font-size: 34rpx;
+  color: #000;
+}
+.evaluate-label{
+  height: 30rpx;
+  line-height: 30rpx;
+  /* float: left; */
+  font-size: 22rpx;
+  border-radius: 6rpx;
+  background-color: rgba(245, 58, 58, 0.664);
+  padding: 5rpx 22rpx;
+  color: #fff;
+  margin-left: 30rpx;
+  /* overflow: hidden; */
+}
+.date-txt {
+  display: flex;
+  justify-content: flex-end;
+  color: #aaa;
+  font-size: 34rpx;
+  margin-top: 20rpx;
+}

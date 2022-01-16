@@ -1,0 +1,73 @@
+<!--pages/historyActInfo/historyActInfo.wxml-->
+
+<view class='nav'>
+  <text class='title'>广场</text>
+</view>
+<view class="wrapper">
+  <view class='act-info'>
+    <view class='top'>
+      <view class="actLogo">
+        <image src="{{history.eventImgUrl}}" class="act-logo-img"></image> 
+      </view>
+      <view><text class="act-name-txt">{{history.title}}</text></view>
+      <view class='act-label' wx:for="{{tags}}">{{item}}</view>
+    </view>
+    <view class='act-intro'>
+      <text>{{history.eventSummary}}</text> 
+    </view>
+    <view class='act-img'>
+      <!-- <image src='{{history.firstImgUrl}}' class='act-img-item'></image> -->
+      <image wx:for="{{history.resultPictures}}" src='{{item.imgUrl}}' class='act-img-item'></image>
+    </view>
+    <view class='like'>
+      <view>
+        <image src='{{zan_pic}}' class="zan-img" bindtap="clickZan"></image>
+        <text class="like-txt">{{history.likeNum}}</text>
+      </view>
+      <view>
+        <image src='{{comment_pic}}' class="comment-img"></image>
+        <text class="like-txt">{{history.commentNum}}</text>
+      </view>
+    </view>
+  </view>
+  <i-tabs current="{{ currentTab }}" bindchange="handleTabChange" i-class="tabs" color="#ff5a18">
+      <i-tab key="comment" title="评论"></i-tab>
+      <i-tab key="zan" title="喜欢"></i-tab>
+  </i-tabs>
+  <view wx:if="{{commentTab}}" class='tab1'wx:for="{{history.comments}}" >
+    <view class='comment-info'>
+        <view class="avatar">
+          <image src="{{item.userAvator}}" class="avatar-img"></image> 
+        </view>
+        <view class="nickname-txt">
+          <text>{{item.userName}}</text>
+          <text class='evaluate-label'>{{item.rate}}</text>
+        </view>
+        <view class='name-txt'>
+          <text>{{item.userSchool}}-{{item.userClass}}</text>
+          <!-- <text>{{item.userName}}</text> -->
+        </view>
+      <view class='comment-txt'>
+        <text>{{item.comment}}</text> 
+      </view>
+      <view class='date-txt'>
+        <text>{{item.createdTime}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{zanTab}}" class='tab2' wx:for="{{history.likes}}">
+    <view class='comment-info'>
+        <view class="avatar">
+          <image src="{{item.userAvator}}" class="avatar-img"></image> 
+        </view>
+        <view class="nickname-txt">
+          <text>{{item.userName}}</text>
+        </view>
+        <view class='name-txt'>
+          <text>{{item.userSchool}}-{{item.userClass}}</text>
+          <!-- <text>{{item.userName}}</text> -->
+        </view>
+    </view>
+  </view>
+</view>

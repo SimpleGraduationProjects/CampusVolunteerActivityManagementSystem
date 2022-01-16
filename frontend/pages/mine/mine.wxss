@@ -1,0 +1,179 @@
+/* pages/mine/mine.wxss */
+.container{
+  background-image: url('http://127.0.0.1:8888/images/mine-bgc.jpg');
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.title{/*???*/
+  color: rgb(0, 0, 0);
+  display: inline;
+}
+
+.top{
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  float: left;
+  display: block;
+  position: relative;
+  top: -145rpx;
+}
+.scanButton {
+  z-index: 1000;
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+}
+.scan-menu {
+  z-index: 1000;
+  position: absolute;
+  right: 20rpx;
+  top: 90rpx;
+  width: 150rpx;
+}
+.scan-menu ul li {
+  color: #fff;
+  border: 1px solid grey;
+  padding: 10rpx;
+  background-color: rgba(255, 255, 255, 0.2);
+  line-height: 74rpx;
+}
+.scan-menu ul li::after{
+  content: '';
+  display: none;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+.qr-code {
+  position: absolute;
+  z-index: 2000;
+  margin-top: 100rpx;
+  width: 100%;
+  height: 700rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.qr-code-img {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: relative;
+  width: 70%;
+
+}
+.avatar{
+  width: 154rpx;
+  height: 154rpx;
+  margin: 0 auto;
+  border-radius: 144rpx;
+  margin-top: 20rpx;
+  overflow:hidden;  
+  display: block;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);  
+}
+.nickname{
+  margin: 0 auto;
+  margin-top: 10rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.points{
+  width: 700rpx;
+  height: 95rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin: 0 auto;
+  margin-top: -40rpx;
+  border: 2rpx solid #77BB42;
+}
+
+.img{
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  margin-left: 10rpx;
+}
+.jiantou-img{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 320rpx;
+  float: left;
+}
+.points-text{
+  line-height: 95rpx;
+  float: left;
+}
+.mypoints{
+  font-weight: bold;
+  line-height: 95rpx;
+  float: left;
+  color: #ff5a18;
+  margin-left: 15rpx;
+}
+
+.center{
+  margin: 0 auto;
+  margin-top: 20rpx;
+  background-color: #fff;
+  border: 2rpx solid #77BB42;
+  border-radius: 10rpx;
+  width: 700rpx;
+  height: 480rpx;
+}
+
+.info{
+  width: 700rpx;
+  height: 105rpx;
+  background-color: #fff;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  margin: 0 auto;
+  margin-top: 10rpx;
+}
+.info:active{
+  background-color: #cccccc;
+}
+
+.line{
+margin: 0 auto;
+width: 640rpx;
+height: 2rpx;
+background-color: #000;
+}
+
+.text{
+  line-height: 105rpx;
+  float: left;  
+}
+
+.safe{
+  width: 700rpx;
+  height: 105rpx;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.safe:active{
+  background-color: #cccccc;
+}
+.myactivity{
+  width: 700rpx;
+  height: 105rpx;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.myactivity:active{
+  background-color: #cccccc;
+}
+.about{
+  width: 700rpx;
+  height: 105rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+}
+.about:active{
+  background-color: #cccccc;
+}

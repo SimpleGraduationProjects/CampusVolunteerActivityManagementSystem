@@ -1,0 +1,111 @@
+/**index.wxss**/
+.page{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  bottom: 0rpx;
+  position: fixed;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  /* background-color: rgb(180, 238, 142); */
+  background-color: rgba(132, 192, 85, 0.932);
+  /* background-image: url('http://www.shenqihl.club:8080/images/bgimg.jpg'); */
+}
+.top{
+  margin-top: -40rpx;
+}
+.top-image {
+  width: 144rpx;
+  height: 144rpx;
+  display: block;
+  margin-left: 16rpx;
+}
+.top-name{
+  display: block;
+  margin-top: 20rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 14pt;
+}
+.center{
+  height: 710rpx;
+}
+.box1{
+  width: 580rpx;
+  height: 80rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+}
+.head-img{
+  width: 55rpx;
+  height: 55rpx;
+  margin-top: 7rpx;
+  float: left;
+}
+.user-inp{
+  font-size: 12.5pt;
+  padding-top: 10rpx;
+  padding-left: 10rpx;
+}
+
+
+.box2{
+  width: 580rpx;
+  height: 80rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+}
+.pwd-img{
+  width: 65rpx;
+  height: 65rpx;
+  float: left;
+  margin-top: 7rpx;
+}
+.pwd-inp{
+  font-size: 12.5pt;
+  padding-top: 10rpx;
+  padding-left: 10rpx;
+}
+
+.box3{
+  width: 580rpx;
+  margin-top: 20rpx;
+}
+.radio1{
+  margin-left: 50rpx;
+}
+.radio2{
+  margin-left: 120rpx;
+}
+radio-group radio{
+  transform:scale(0.8);
+}
+
+.box4{
+  width: 580rpx;
+  height: 80rpx;
+  margin-top: 20rpx;
+}
+.btn-login{
+  font-size: 14pt;
+  background-color: rgb(40, 168, 115);
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.btn-login :active{
+  background-color: rgb(109, 209, 168);
+}
+.txt-reg{
+  float: right;
+  font-size: 12.5pt;
+  color: #fff;
+}
+.txt-reg :active{
+  color: black;
+}

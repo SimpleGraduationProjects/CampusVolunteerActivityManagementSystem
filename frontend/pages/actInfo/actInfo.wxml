@@ -1,0 +1,78 @@
+<!--pages/actAssess/actAssess.wxml-->
+
+<view class='nav'>
+  <text class='nav-txt'>活动详情</text>
+</view>
+
+<view class='top'>
+  <image class='act-logo' src='{{actInfo.eventImgUrl}}'></image>
+  <view class='top-right'>
+    <text class='name'>{{actInfo.title}}</text>
+    <view class='status'>
+      <text class='status-txt'>{{actInfo.status}}</text>
+    </view>
+    <text class='points'>积分：{{actInfo.eventScore}}</text>
+  </view>
+</view>
+<view class='line'></view>
+<view class='center'>
+  <view class='intro'>
+    <view class='intro-title'>活动简介</view>
+    <text class='intro-txt'>{{actInfo.description}}</text>
+  </view>
+  <view class='items-ex'>
+  <view class='items'>
+    <view>
+      <text class='title'>开始时间</text>
+    </view>
+    <view>
+      <text class='txt'>{{actInfo.startTime}}</text>
+    </view>
+  </view>
+  </view>
+  <view class='items-ex'>
+  <view class='items'>
+    <text class='title'>结束时间</text>
+    <text class='txt'>{{actInfo.endTime}}</text>
+  </view>
+  </view>
+  <view class='items-ex'>
+  <view class='items'>
+    <text class='title'>活动地点</text>
+    <text class='txt'>{{actInfo.location}}</text>
+  </view>
+  </view>
+  <view class='items-ex'>
+  <view class='items'>
+    <text class='title'>举办方</text>
+    <text class='txt'>{{actInfo.supplyName}}</text>
+  </view>
+  </view>
+  <view class='items-ex'>
+  <view class='items'>
+    <text class='title'>发起人</text>
+    <text class='txt'>{{actInfo.supplyName}}</text>
+  </view>
+  </view>
+
+  <view class='bottom'>
+    <view class='bottom-left' bindtap="callUs">
+      <view><image class='left-img' src='/image/contact.png'></image></view>      
+      <view><text class='callme-txt'>联系我们</text></view>
+    </view>
+    <view wx:if="{{actInfo.maxnum==actInfo.num}}">
+        <view class='bottom-right-disable'>
+      <text class='sign-txt'>停止报名</text>
+    </view>
+    </view>
+    <view wx:else>
+    <view class='bottom-right'>
+      <text class='sign-txt' bindtap='signUp'>报名</text>
+    </view>
+    </view>
+
+  </view>
+
+
+</view>
+

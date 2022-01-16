@@ -1,0 +1,4 @@
+<!--pages/mine_aboutUs/mine_aboutUs.wxml-->
+<view class="txt">
+  <view>如有问题，请联系18360869989</view>
+</view>

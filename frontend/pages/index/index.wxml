@@ -1,0 +1,28 @@
+<!--pages/index/index.wxml-->
+
+<view class='top'>
+  <text class='title'>首页</text>
+  <button bindtap="exit" class='logout-btn'>退出</button>
+</view>
+<view>
+<view class='act-info' bindtap='actAssess' wx:for="{{activityList}}" wx:key="{{item.eventId}}" id="{{item.eventId}}"> 
+  <view>
+    <image class='head-img' src='{{item.eventImgUrl}}'></image>
+  </view>
+  <view class='right'>
+    <text class='name'>{{item.title}}</text>
+    <text class='txt'>地点：{{item.location}}</text>
+    <text class='txt'>活动时间：{{item.startTime}}</text>
+    <text class='txt'>报名截止：{{item.endTime}}</text>
+    <view class='points'>
+      <text>{{item.eventScore}}</text>
+    </view>
+  </view>
+</view>
+</view>
+<view>
+<i-page current="{{ current }}" total="{{ totalPage }}" bind:change="changePage" class="page">
+    <view slot="prev">上一页</view>
+    <view slot="next">下一页</view>
+</i-page>
+</view>

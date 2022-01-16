@@ -1,0 +1,23 @@
+<!--pages/mine_baseInfo/mine_baseInfo.wxml-->
+<text class='txt-head'>编辑</text>
+<view class='box'>
+  <view class='item item-first'>
+    <view class='inp-view'><input placeholder='学号' bindblur='snoBlur' bindinput='snoInput' value='{{stuId}}' class='txt'></input></view>
+    <!-- <view><text wx:if="{{snoLen!=9}}" class='snoTip'>学号应为9位数!</text></view> -->
+  </view>
+  <view class='item'>
+    <view><input placeholder='姓名' value='{{userName}}' bindinput='nameInput' class='txt'></input></view>
+    <view></view>
+  </view>
+  <view class='item'>
+    <view><input placeholder='院系' value='{{userSchool}}' bindinput='schoolInput' class='txt'></input></view>
+    <view></view>
+  </view>
+  <view class='item item-first'>
+    <view><input placeholder='班级' value='{{userClass}}' bindinput='classInput' class='txt'></input></view>
+    <view></view>
+  </view>
+  
+</view>
+<button class='btn-reg' bindtap='saveChange'>保存修改</button>
+

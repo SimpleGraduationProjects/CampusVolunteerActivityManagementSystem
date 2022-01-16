@@ -1,0 +1,33 @@
+<!--pages/index.wxml-->
+<text class='txt-head'>注册</text>
+<view class='box'>
+  <view class='item item-first'>
+    <view class='inp-view'><input placeholder='学号' bindblur='stuIdBlur' bindinput='stuIdInput'></input></view>
+    <view><text wx:if="{{stuIdLen!=9}}" class='stuIdTip'>学号应为9位数!</text></view>
+  </view>
+  <view class='item'>
+    <view><input placeholder='姓名' bindinput='userName'></input></view>
+    <view></view>
+  </view>
+  <view class='item'>
+    <view><input placeholder='院系' bindinput='userSchool'></input></view>
+    <view></view>
+  </view>
+  <view class='item'> 
+    <view><input placeholder='班级' bindinput='userClass'></input></view>
+    <view></view>
+  </view>
+  <view class='item'>
+    <view><input placeholder='手机号码' bindinput='userPhone'></input></view>
+    <view></view>
+  </view>
+  <view class='item'>
+    <view class='inp-view'><input placeholder='密码' type='password' bindinput='pwd1Input' bindblur='pwd1Blur'></input></view>
+    <view><text wx:if="{{pwd1Len!=6}}" class='stuIdTip' class='stuIdTip'>请设置6位数密码!</text></view>
+  </view>
+  <view class='item item-last'>
+    <view class='inp-view'><input placeholder='确认密码' bindinput='pwd2Input' bindblur='pwd2Blur' type='password'></input></view>
+    <view><text wx:if="{{isSame}}" class='stuIdTip'>两次密码须一致!</text></view>
+  </view>
+</view>
+<view class='btn-reg' bindtap='register'>开启新的旅程</view>

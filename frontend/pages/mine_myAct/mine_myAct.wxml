@@ -1,0 +1,35 @@
+<!--pages/mine_myAct/mine_myAct.wxml-->
+<view class='nav'>
+  <text class='title'>我的活动</text>
+</view>
+<i-tabs current="{{ currentTab }}" bindchange="handleTabChange" i-class="tabs" color="#ff5a18">
+  <i-tab key="activity" title="全部活动"></i-tab>
+  <i-tab key="noCommentActivity" title="待评价活动"></i-tab>
+</i-tabs>
+<view class="container">
+  <view wx:if="{{activityTab}}" wx:for="{{mineAct}}" key="{{item.eventId}}" class='act-item'>
+    <view>
+      <image src="{{item.eventImgUrl}}" class="act-image"></image>
+    </view>
+    <view class="act-info">
+      <text class="txt act-title">{{item.title}}</text>
+      <text class="txt">{{item.startTime}}</text>
+      <text class="txt">{{item.endTime}}</text>
+      <!-- <text class="txt">2018/9/10 16:00</text> -->
+      <i-icon type="scan" size="32" class="scan-button" bindtap="scanCode" id="{{item.eventId}}" 
+      style="display:  {{ item.admin == true ? 'block' :  'none' }}"/>
+    </view>
+  </view>
+
+  <view wx:if="{{noCommentTab}}" wx:for="{{noCommentAct}}" key="{{item.eventId}}" class='act-item'>
+    <view>
+      <image src="{{item.eventImgUrl}}" class="act-image"></image>
+    </view>
+    <view class="act-info">
+      <text class="txt act-title">{{item.title}}</text>
+      <text class="txt">{{item.startTime}}</text>
+      <text class="txt">{{item.endTime}}</text>
+    </view>
+    <text class="comment-btn" bindtap="gotoComment" id="{{item.eventId}}">评价</text>
+  </view>
+</view>

@@ -1,0 +1,65 @@
+<!--pages/mine/mine.wxml-->
+<view class='container'>
+  <!--<text class='title'>我的</text>-->
+  <!-- <button bindtap="scanButton" class="scanButton">扫我</button> -->
+  <i-icon type="businesscard" size="32" class="scanButton" bindtap="myCode"/>
+  <!-- <view class="scan-menu">
+    <ul style="display:{{display}}">
+      <li bindtap="scanCode">扫一扫</li>
+      <li bindtap="myCode">二维码</li>
+    </ul>
+  </view> -->
+  <view class="qr-code" style="display:{{myCodeDisplay}}">
+    <image src="{{qrCodeSrc}}" class="qr-code-img"></image>
+  </view>
+  <view class='top'>
+    <view class="avatar">
+      <!-- <image class="avatar" src='{{userInfo.avatarUrl}}'></image>
+       -->
+       <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="nickname">{{userInfo.nickName}}</view>
+  </view>
+
+  <view class='points'>
+    <image class='img' src='/image/points.png'></image>
+    <text class='points-text'>我的积分</text>
+    <text class='mypoints'>{{userInfo.userScore}}</text>
+    <image class='jiantou-img' src='/image/jiantou.png'></image>
+  </view>
+
+  <view class='center'>
+    <view class='info' bindtap='baseInfo'>
+      <image class='img' src='/image/info.png'></image>
+      <text class='text'>基本资料</text>
+      <image class='jiantou-img' src='/image/jiantou.png'></image>
+    </view>
+    <view class='line'></view>
+    <view class='safe' bindtap='safeCenter'>
+      <image class='img' src='/image/safe.png'></image>
+      <text class='text'>安全中心</text>
+      <image class='jiantou-img' src='/image/jiantou.png'></image>
+    </view>
+    <view class='line'></view>
+    <view class='myactivity'  bindtap='myAct'>
+      <image class='img' src='/image/myactivity.png'></image>
+      <text class='text'>我的活动</text>
+      <image class='jiantou-img' src='/image/jiantou.png'></image>
+    </view>
+    <view class='line'></view>
+    <view class='about'  bindtap='aboutUs'>
+      <image class='img' src='/image/about.png'></image>
+      <text class='text'>关于我们</text>
+      <image class='jiantou-img' src='/image/jiantou.png'></image>
+    </view>
+    <view class='line'></view>
+
+
+  </view>
+</view>
+<view  wx:if="{{loading}}">
+<view class="container">
+    <i-spin fix></i-spin>
+</view>
+</view>
+

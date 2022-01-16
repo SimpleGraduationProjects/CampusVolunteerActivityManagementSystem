@@ -1,0 +1,32 @@
+<!--pages/mine_myAct_comment/mine_myAct_comment.wxml-->
+<view class='nav'>
+  <!-- <i-icon type="return" size="26" color="#fff" bindtap="goback"/> -->
+  <text class='title'>评价</text>
+</view>
+<view class="container">
+  <!-- <view class="info"> -->
+    <view class='act-info-wrapper'>
+      <view>
+        <image src="{{actInfo.eventImgUrl}}" class="act-image"></image>
+      </view>
+      <view class="act-info">
+        <text class="act-title">{{actInfo.title}}</text>
+        <view class="txt">
+          <text class="points">{{actInfo.status}}</text>
+          <text>积分：{{actInfo.eventScore}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="evaluate-wrapper">
+      <view class="evaluate">
+        <text class="act-title evaluate-title">本次活动满意度</text>
+        <i-radio-group current="{{currentGrade}}" bindchange="handleGradeChange">
+          <i-radio wx:for="{{grade}}" position="{{position}}" wx:key="{{item.name}}" value="{{item.name}}" color="#ff5a18"></i-radio>
+        </i-radio-group>
+        <form>
+          <textarea bindinput='bindTextAreainput' value="{{evaluateTxt}}" placeholder="请输入评价内容(最多50字)" maxlength="50" class="evaluate-txt"></textarea>
+        </form>
+      </view>
+      <view class="publish-btn" bindtap="publish">发布</view>
+    </view>
+  </view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "i-radio-group": "../../dist/radio-group/index",
+    "i-radio": "../../dist/radio/index",
+    "i-input": "../../dist/input/index",
+    "i-icon": "../../dist/icon/index"
+  }
+}

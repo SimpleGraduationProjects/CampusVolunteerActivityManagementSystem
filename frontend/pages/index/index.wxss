@@ -1,0 +1,73 @@
+/* pages/index/index.wxss */
+
+.top{
+  height: 130rpx;
+  width: 100%;
+  background-color: #77BB42;
+}
+.logout-btn{
+  width: 140rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: right;
+  margin-right: 30rpx;
+  margin-top: 25rpx;
+  border-radius: 10rpx;
+  background-color: rgba(57, 105, 21, 0.918);
+  color: #fff;
+}
+.title{
+  font-size: 45rpx;
+  color: #fff;
+  line-height: 130rpx;
+  margin-left: 30rpx;
+  font-family: '黑体';
+}
+.act-info{
+  width: 100%;
+  height: 250rpx;
+  background-color: #fff;
+  border-bottom: 2rpx solid #888;
+}
+.head-img{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 8rpx;
+  float: left;
+  display: flex;
+  overflow: hidden;
+  margin-top: 25rpx;
+  margin-left: 18rpx;
+}
+.right{
+  float: left;
+  margin: 0 auto;
+  margin-left: 18rpx;
+  margin-top: 15rpx;
+}
+.name{
+  color: #000;
+  font-size: 36rpx;
+  display: block;
+  
+}
+.txt{
+  color: rgb(109, 109, 109);
+  font-size: 30rpx;
+  display: block;
+  margin-top: 2rpx;
+}
+.points{
+  font-size: 20rpx;
+  border: 4rpx solid #77BB42;
+  border-radius: 5rpx;
+  width: 120rpx;
+  margin-top: 4rpx;
+  text-align: center;
+}
+.page {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  margin: 0 auto;
+}

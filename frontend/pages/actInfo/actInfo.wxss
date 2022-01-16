@@ -1,0 +1,140 @@
+/* pages/actAssess/actAssess.wxss */
+.nav{
+  width: 100%;
+  height: 130rpx;
+  background-color: #77BB42;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nav-txt{
+  line-height: 160rpx;
+  color: #fff;
+  font-size: 45rpx;
+}
+.line{
+  width: 100%;
+  background-color: #ddd;
+  height: 30rpx;
+}
+.top{
+  width: 100%;
+  height: 220rpx;
+}
+.act-logo{
+  width: 180rpx;
+  height: 180rpx;
+  margin-left: 40rpx;
+  margin-top: 20rpx;
+  border-radius: 8rpx;
+  float: left;
+}
+.top-right{
+  float: left;
+  margin-left: 30rpx;
+}
+.name{
+  font-size: 36rpx;
+  display: block;
+  margin-top: 40rpx;
+}
+.status{
+  width: 130rpx;
+  border: 3rpx solid rgb(87, 223, 148);
+  float: left;
+  font-size: 30rpx;
+  text-align: center;
+  color: rgb(87, 223, 148);
+  margin-top: 20rpx;
+}
+.points{
+  font-size: 30rpx;
+  float: left;
+  color: rgb(87, 223, 148);
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+
+.center{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.intro{
+  padding-left: 40rpx;
+  padding-right: 30rpx;
+  padding-bottom: 30rpx;
+}
+.intro-title{
+  font-size: 36rpx; 
+}
+.intro-txt{
+  padding-top: 15rpx;
+  font-size: 30rpx;
+}
+.items-ex{
+  width: 670rpx;
+  margin: 0 auto;
+}
+.items{
+  height: 80rpx;
+  width: 100%;
+  border-top: 3rpx solid #aaa; 
+  line-height: 80rpx;
+ /* margin-left: 40rpx;
+  margin-right: 40rpx;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+.bottom{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30rpx;
+}
+
+.bottom-left{
+  width: 240rpx;
+  height: 130rpx;
+  background-color: #ddd;
+  color: rgb(78, 76, 76);
+  font-size: 40rpx;
+  border-radius: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.left-img{
+  width: 120rpx;
+  height: 60rpx;
+  padding-top: 8rpx;
+}
+
+.bottom-right-disable{
+  widows: 400rpx;
+  height: 130rpx;
+  width: 390rpx;
+  background-color: rgba(90, 83, 77, 0.603);
+  color: #fff;
+  font-size: 50rpx;
+  line-height: 130rpx;
+  text-align: center;
+  border-radius: 30rpx;
+}
+.bottom-right{
+  widows: 400rpx;
+  height: 130rpx;
+  width: 390rpx;
+  background-color: rgba(252, 130, 16, 0.966);
+  color: #fff;
+  font-size: 50rpx;
+  line-height: 130rpx;
+  text-align: center;
+  border-radius: 30rpx;
+}
+

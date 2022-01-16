@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="page">
+<view class='container'>
+  <view class='top'>
+    <image src='/image/logo.png' class="top-image"></image>
+    <text class='top-name'>校园志愿</text>
+  </view>
+  <view class='center'>
+    <view class='box1'>
+      <image src='/image/head.png' class='head-img'></image>
+      <input placeholder='学号' class='user-inp' type='text' bindinput='getUserId'></input>
+    </view>
+    <view class='box2'>
+      <image src='/image/pwd.png' class='pwd-img'></image>
+      <input placeholder='密码' class='pwd-inp' type='password' bindinput='getUserPwd'></input>
+    </view>
+    <view class='box3'>
+    <radio-group bindchange="getUserRole">
+      <radio class='radio1' value='1'></radio>管理员
+      <radio class='radio2' value='0'></radio>志愿者
+    </radio-group>
+    </view>
+    <view class='box4'>
+      <button class='btn-login' bindtap='login'>登录</button>
+      <text class='txt-reg' bindtap='register'>立即注册</text>
+    </view>
+  </view>
+</view>
+
+</view>

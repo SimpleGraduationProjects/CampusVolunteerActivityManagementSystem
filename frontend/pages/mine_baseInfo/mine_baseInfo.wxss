@@ -1,0 +1,74 @@
+/* pages/mine_baseInfo/mine_baseInfo.wxss */
+page{
+  background-color: #e0e0e0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.txt-head{
+  display: flex;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #fff;
+  font-size: 40rpx;
+  margin-top: 20rpx;
+  padding-left: 10rpx;
+  color: #353535;
+}
+
+.btn-reg{
+  width: 370rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: rgb(252, 130, 16);
+  margin-top: 60rpx;
+  align-items: center;
+  border-radius: 8rpx;
+  color: #fff;
+  font-size: 38rpx;
+  
+}
+.btn-reg:active{
+  background-color: rgba(253, 159, 71, 0.89);
+}
+
+
+
+.box{
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 30rpx;
+ 
+} 
+
+.item{
+  height: 90rpx;
+  line-height: 90rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: #fff;
+  border-bottom:2rpx solid #ccc;
+  /*border-bottom: 3rpx solid rgb(255, 96, 4);
+  align-items:center;
+  border-left:  solid 3rpx rgb(255, 96, 4);
+  border-right:  solid 3rpx rgb(255, 96, 4);*/
+
+}
+.txt{
+  color: #888;
+  line-height: 90rpx;
+  height: 90rpx;
+  margin-left: 30rpx;
+}
+.snoTip{
+  color:#e64340;
+  font-weight: bold;
+  margin-right: 30rpx;
+}
+.inp-view{
+  width: 260rpx;
+}
+

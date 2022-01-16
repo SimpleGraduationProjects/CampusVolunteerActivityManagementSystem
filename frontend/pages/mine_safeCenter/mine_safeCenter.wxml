@@ -1,0 +1,22 @@
+<!--pages/mine_safeCenter/mine_safeCenter.wxml-->
+<text class='txt-head'>修改密码</text>
+<view class='box'>
+  <!-- <view class='item item-first'>
+    <view class='inp-view'>
+      <input placeholder='原密码' value='{{oldPwd}}' bindinput='oldPwdInput' class='txt' type="password"></input>
+    </view>
+  </view> -->
+  <view class='item item-first'>
+    <view>
+      <input placeholder='新密码' value='{{newPwd}}'  bindinput='newPwdInput' class='txt' type="password"></input>
+    </view>
+  </view>
+  <view class='item item-first'>
+    <view>
+      <input placeholder='再次输入新密码' value='{{confirmNewPwd}}' bindinput='confirmNewPwdInput' class='txt' type="password"></input>
+    </view>
+  </view>
+</view>
+<button class='btn-reg' bindtap='saveChange'>确认修改</button>
+
+

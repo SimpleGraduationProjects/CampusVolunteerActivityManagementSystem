@@ -1,0 +1,99 @@
+/* pages/history/history.wxss */
+
+.top{
+  height: 130rpx;
+  width: 100%;
+  background-color: #77BB42;
+}
+.title{
+  font-size: 45rpx;
+  color: #fff;
+  line-height: 130rpx;
+  margin-left: 30rpx;
+  font-family: '黑体';
+}
+.slideItem{
+  width: 750rpx;
+  height: 400rpx;
+}
+.imgSlide{
+  width: 750rpx;
+  height: 400rpx;
+}
+
+.hr{
+  width: 100%;
+  height: 10rpx;
+  background-color: #888;
+}
+
+.history-act{
+  width: 100%;
+  height: 250rpx;
+  margin-bottom: 10rpx;
+  /*display: flex;*/
+}
+.item-left{
+  height: 250rpx;
+  width: 430rpx;
+  float: left;
+}
+.left-img{
+  height: 250rpx;
+  width: 430rpx;
+}
+.item-right{
+  width: 260rpx;
+  height: 190rpx;
+  /* background-color: #3de19a; */
+  background-color: rgb(228, 245, 214);
+  /*display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 15rpx;*/
+  /* padding-right: 15rpx; */
+  margin-bottom: 5px;
+  padding: 15px;
+  float: left;
+}
+.bg{
+  background-color: #a8ff54;
+}
+.bg3{
+  background-color:#00874c;
+}
+.right-top{
+  /* height: 80rpx; */
+  display: flex;
+  font-size: 36rpx;
+}
+.act-logo{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-left: 8rpx;
+}
+.txt-title{
+  font-size: 32rpx;
+  /* margin-left: 20rpx; */
+  line-height: 40rpx;
+  /* margin-left: 10rpx;   */
+}
+.txt-intro{
+  font-size: 30rpx;
+  display: -webkit-box;         
+  word-break: break-all;
+  text-overflow: ellipsis;  
+  /* margin-left: 10px; */
+  margin-top: 8px;
+  overflow: hidden;           
+  -webkit-box-orient: vertical;  
+  -webkit-line-clamp: 4;  
+  color: rgb(109, 109, 109);  
+}
+.page {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  margin: 0 auto;
+}

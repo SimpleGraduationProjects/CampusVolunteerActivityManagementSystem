@@ -1,0 +1,49 @@
+{
+  "pages":[
+    
+    "pages/mine/mine",
+    "pages/index/index",
+    "pages/login/login",
+    "pages/history/history",
+    "pages/mine_myAct/mine_myAct",
+    "pages/register/register",
+    "pages/actInfo/actInfo",
+    "pages/mine_baseInfo/mine_baseInfo",
+    "pages/mine_safeCenter/mine_safeCenter",
+    "pages/historyActInfo/historyActInfo",
+    "pages/mine_aboutUs/mine_aboutUs",
+    "pages/mine_myAct_comment/mine_myAct_comment"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "校园志愿",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "/image/首页1.png",
+        "selectedIconPath": "/image/首页2.png"
+      },
+      {
+        "text": "广场",
+        "pagePath": "pages/history/history",
+        "iconPath": "/image/广场1.png",
+        "selectedIconPath": "/image/广场2.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/mine",
+        "iconPath": "/image/我的1.png",
+        "selectedIconPath": "/image/我的2.png"
+      }
+    ],
+    "color": "#ccc",
+    "selectedColor": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
